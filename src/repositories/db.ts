@@ -6,7 +6,7 @@ export type ProductType = {
 }
 
 // Connection URL
-const url = process.env.MONGO_URL || 'mongodb+srv://admin:admin@cluster0.2wclziu.mongodb.net/?retryWrites=true&w=majority';
+const url = process.env.MONGO_URL || 'localhost';
 console.log('process.env.MONGO_URL :', process.env.MONGO_URL)
 console.log('url :', url)
 const client = new MongoClient(url);
