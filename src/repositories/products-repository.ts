@@ -13,7 +13,6 @@ export const productsRepository = {
     if (!title.trim()) {
       return null
     }
-
     const newProduct: ProductType = {
       title,
       id: Date.now().toString()
