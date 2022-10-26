@@ -1,4 +1,6 @@
 import { MongoClient, ObjectId } from 'mongodb'
+import * as dotenv from 'dotenv'
+dotenv.config()
 
 export type ProductType = {
   title: string
@@ -6,7 +8,7 @@ export type ProductType = {
 }
 
 // Connection URL
-const url = process.env.MONGO_URL || 'localhost';
+const url = process.env.MONGO_URL || '';
 console.log('process.env.MONGO_URL :', process.env.MONGO_URL)
 console.log('url :', url)
 const client = new MongoClient(url);
