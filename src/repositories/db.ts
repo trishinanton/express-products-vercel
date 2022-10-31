@@ -6,7 +6,7 @@ export type ProductType = {
 }
 
 // Connection URL
-const url = 'mongodb://localhost:27017';
+const url = 'mongodb+srv://admin:admin@cluster0.2wclziu.mongodb.net/shop-dev?retryWrites=true&w=majority';
 console.log('url :', url)
 const client = new MongoClient(url);
 
