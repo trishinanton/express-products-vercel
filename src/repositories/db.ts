@@ -18,6 +18,7 @@ const client = new MongoClient(url);
 // Database Name
 const db = client.db()
 
+
 export const productCollection = db.collection<ProductType>('products');
 
 export const runDb = async () => {
