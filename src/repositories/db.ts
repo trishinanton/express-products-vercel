@@ -8,14 +8,15 @@ export type ProductType = {
 }
 
 // Connection URL
-const url = process.env.MONGO_URL || '';
-console.log('process.env.MONGO_URL :', process.env.MONGO_URL)
+const url = process.env.MONGO_URL;
 console.log('url :', url)
+if (!url) {
+  throw Error('dDon\'t corect URL')
+}
 const client = new MongoClient(url);
 
 // Database Name
-const dbName = 'express-vercel-db';
-const db = client.db(dbName)
+const db = client.db()
 
 export const productCollection = db.collection<ProductType>('products');
 
