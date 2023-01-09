@@ -3,7 +3,7 @@ import { productsRouter } from './routers/products-router';
 import { runDb } from './repositories/db';
 
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 5001
 
 const parserMiddleware = express.json()
 app.use(parserMiddleware)
