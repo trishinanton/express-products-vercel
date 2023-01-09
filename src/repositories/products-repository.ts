@@ -8,6 +8,7 @@ export const productsRepository = {
     if (!title.trim()) {
       return null
     }
+
     const result = await productCollection.insertOne({title})
     return {
       title: title,
